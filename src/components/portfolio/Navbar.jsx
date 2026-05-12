@@ -79,7 +79,7 @@ export default function Navbar({ currentPage }) {
             {dark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </Button>
           <a
-            href="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_69aad920428f8a2d6ed9efae/63991a369_MaheshKumarNalluri_Resume.pdf"
+            href="https://drive.google.com/file/d/1o3BYShhNx0xFVINr2QNoTKUt9kb_wrWa/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:flex"
@@ -127,7 +127,7 @@ export default function Navbar({ currentPage }) {
                 </Link>
               ))}
               <a
-                href="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_69aad920428f8a2d6ed9efae/63991a369_MaheshKumarNalluri_Resume.pdf"
+                href="https://drive.google.com/file/d/1o3BYShhNx0xFVINr2QNoTKUt9kb_wrWa/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block"

@@ -103,9 +103,9 @@ export default function Contact() {
               className="glass rounded-xl p-6 mt-6"
             >
               <p className="text-sm text-muted-foreground leading-relaxed">
-                I'm currently open to new opportunities and freelance projects.
-                Whether you need a frontend engineer for your team or want to
-                collaborate on something exciting — let's talk.
+                I'm currently open to full-stack roles, freelance projects, and
+                collaborations. Whether you need someone to build an end-to-end
+                web app, a REST API, or a cross-platform mobile app — let's talk.
               </p>
             </motion.div>
           </div>

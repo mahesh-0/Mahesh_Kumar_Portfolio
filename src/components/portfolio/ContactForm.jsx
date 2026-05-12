@@ -9,6 +9,7 @@ import { Send, CheckCircle, AlertCircle } from "lucide-react";
 const BREVO_API_KEY = import.meta.env.VITE_BREVO_API_KEY;
 const BREVO_URL = import.meta.env.VITE_BREVO_URL;
 const BREVO_USER_EMAIL = import.meta.env.VITE_BREVO_USER_EMAIL;
+const BREVO_RECIPIENT_EMAIL = import.meta.env.VITE_BREVO_RECIPIENT_EMAIL;
 const BREVO_USER_NAME = import.meta.env.VITE_BREVO_USER_NAME;
 
 async function sendEmailViaBrevo({ name, email, subject, message }) {
@@ -26,7 +27,7 @@ async function sendEmailViaBrevo({ name, email, subject, message }) {
       },
       to: [
         {
-          email: BREVO_USER_EMAIL,
+          email: BREVO_RECIPIENT_EMAIL,
           name: BREVO_USER_NAME,
         },
       ],
@@ -103,7 +104,7 @@ export default function ContactForm() {
       setTimeout(() => setSent(false), 4000);
     } catch (err) {
       console.error("Email send error:", err);
-      setError("Failed to send message. Please try again or email me directly.");
+      setError(err.message || "Failed to send message. Please try again or email me directly.");
     } finally {
       setSending(false);
     }
@@ -164,10 +165,23 @@ export default function ContactForm() {
       </div>
 
       {error && (
-        <div className="flex items-center gap-2 text-sm text-red-400 bg-red-400/10 rounded-lg px-4 py-3">
-          <AlertCircle className="w-4 h-4 shrink-0" />
-          {error}
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: -8 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="rounded-xl border border-red-500/20 bg-red-500/10 px-4 py-4 flex items-start gap-3"
+        >
+          <div className="w-8 h-8 rounded-lg bg-red-500/20 flex items-center justify-center shrink-0 mt-0.5">
+            <AlertCircle className="w-4 h-4 text-red-400" />
+          </div>
+          <div>
+            <p className="text-sm font-semibold text-red-400">Failed to send</p>
+            <p className="text-xs text-red-400/80 mt-0.5 leading-relaxed">
+              {error.length > 80
+                ? "Something went wrong. Please email me directly at maheshkumarnalluri7@gmail.com"
+                : error}
+            </p>
+          </div>
+        </motion.div>
       )}
 
       <Button
@@ -181,7 +195,10 @@ export default function ContactForm() {
             Message Sent!
           </>
         ) : sending ? (
-          "Sending..."
+          <span className="flex items-center gap-2">
+            <span className="w-4 h-4 rounded-full border-2 border-primary-foreground/30 border-t-primary-foreground animate-spin" />
+            Sending...
+          </span>
         ) : (
           <>
             <Send className="w-4 h-4" />
