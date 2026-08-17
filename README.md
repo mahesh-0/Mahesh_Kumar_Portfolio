@@ -1,39 +1,100 @@
-**Welcome to your Base44 project**
+# Mahesh Kumar — Developer Portfolio
 
-**About**
+A personal portfolio website showcasing my projects, technical skills, and experience as a Full Stack Developer.
 
-View and Edit your app on [Base44.com](http://Base44.com)
+## 🚀 Live Demo
 
-This project contains everything you need to run your app locally.
+[View Portfolio](https://mahesh-kumar-portfolio.vercel.app/)
 
-**Edit the code in your local development environment**
+## 👨‍💻 About Me
 
-Any change pushed to the repo will also be reflected in the Base44 Builder.
+I'm **Mahesh Kumar Nalluri**, a Full Stack Developer with experience building responsive and scalable web applications.
 
-**Prerequisites:**
+I primarily work with **React, JavaScript, TypeScript, Node.js, Express, and databases**. I enjoy building clean user interfaces, solving complex problems, and developing production-ready applications.
 
-1. Clone the repository using the project's Git URL
-2. Navigate to the project directory
-3. Install dependencies: `npm install`
-4. Create an `.env.local` file and set the right environment variables
+## 🛠️ Tech Stack
 
+### Frontend
+
+* React
+* JavaScript
+* TypeScript
+* HTML5
+* CSS3
+* Tailwind CSS
+
+### Backend
+
+* Node.js
+* Express.js
+* REST APIs
+
+### Databases
+
+* MongoDB
+* PostgreSQL
+
+### Tools
+
+* Git
+* GitHub
+* Vite
+* VS Code
+
+## ✨ Features
+
+* Responsive design
+* Projects showcase
+* Skills and technology overview
+* Experience section
+* Contact information
+* Modern and clean user interface
+
+## 📂 Project Structure
+
+```text
+portfolio/
+├── public/
+├── src/
+│   ├── components/
+│   ├── assets/
+│   ├── App.jsx
+│   └── main.jsx
+├── package.json
+└── vite.config.js
 ```
-VITE_BASE44_APP_ID=your_app_id
-VITE_BASE44_APP_BASE_URL=your_backend_url
 
-e.g.
-VITE_BASE44_APP_ID=cbef744a8545c389ef439ea6
-VITE_BASE44_APP_BASE_URL=https://my-to-do-list-81bfaad7.base44.app
+## ⚙️ Getting Started
+
+### Clone the repository
+
+```bash
+git clone https://github.com/mahesh-0/portfolio.git
 ```
 
-Run the app: `npm run dev`
+### Navigate to the project
 
-**Publish your changes**
+```bash
+cd portfolio
+```
 
-Open [Base44.com](http://Base44.com) and click on Publish.
+### Install dependencies
 
-**Docs & Support**
+```bash
+npm install
+```
 
-Documentation: [https://docs.base44.com/Integrations/Using-GitHub](https://docs.base44.com/Integrations/Using-GitHub)
+### Start the development server
 
-Support: [https://app.base44.com/support](https://app.base44.com/support)
+```bash
+npm run dev
+```
+
+## 📬 Connect With Me
+
+* Portfolio: [mahesh-kumar-portfolio.vercel.app](https://mahesh-kumar-portfolio.vercel.app/)
+* GitHub: [@mahesh-0](https://github.com/mahesh-0)
+
+---
+
+⭐ If you like this project, consider giving it a star.
